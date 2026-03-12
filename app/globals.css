@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { background: #080610; min-height: 100vh; }
+  * { scrollbar-width: thin; scrollbar-color: #302a58 #0e0c1e; }
+}
+
+@layer components {
+  .card { @apply bg-ink-900 border border-ink-700 rounded-xl; }
+  .btn-primary { @apply bg-gold text-ink-950 text-xs tracking-widest uppercase px-5 py-2.5 rounded-lg hover:bg-gold-light transition-all font-bold; }
+  .btn-ghost { @apply border border-ink-600 text-silver text-xs tracking-widest uppercase px-5 py-2.5 rounded-lg hover:border-gold hover:text-gold transition-all; }
+  .btn-danger { @apply border border-rose/30 text-rose/70 text-xs px-3 py-1.5 rounded-lg hover:border-rose hover:text-rose transition-all; }
+  .field-label { @apply block text-xs text-silver/50 mb-1.5 tracking-wider uppercase; }
+  .field-input { @apply w-full bg-ink-800 border border-ink-600 text-silver rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-gold/50 transition-colors placeholder:text-silver/20; }
+  .field-select { @apply field-input appearance-none cursor-pointer; }
+  .badge-gold { @apply text-xs px-2 py-0.5 rounded-full border border-gold/40 text-gold bg-gold/5 font-mono; }
+  .badge-green { @apply text-xs px-2 py-0.5 rounded-full border border-teal/40 text-teal bg-teal/5 font-mono; }
+  .page-title { @apply text-2xl text-gold tracking-wide font-display; }
+  .page-sub { @apply text-silver/50 text-sm mt-1; }
+  .section-title { @apply text-gold text-xs tracking-widest uppercase; }
+  .table-header { @apply text-left px-4 py-3 text-xs tracking-widest text-silver/40 uppercase; }
+  .table-cell { @apply px-4 py-3 text-sm; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.35s ease forwards; }
